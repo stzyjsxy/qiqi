@@ -42,7 +42,7 @@
 		var strHtml2 = "";//存储新闻热点数据的变量
 		$jsontip2.empty();//清空内容
 		$.each(data,function(infoIndex,info){
-			    strHtml2 +="<li>"+"<a href='" +info["url"] +"' target='_blank'>"+info["title"]+"<br>"+"</a>"+"</li>"; 
+			    strHtml2 +="<li>"+"<a href='" +info["url"] +"'"+" target='_blank'>"+info["title"]+"<br>"+"</a>"+"</li>"; 
 		});
 		$jsontip2.html(strHtml2);//显示处理后的数据	
 		
