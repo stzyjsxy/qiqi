@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title></title>
 		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-		<script src="static/js/news-connent.js"></script>
+		<script src="../static/js/news-connent.js"></script>
 	</head>
 	<link rel="stylesheet" type="text/css" href="../static/css/content.css">
 <style>
@@ -37,7 +37,7 @@
 </script>
 <script>
  	//加载热点新闻列表
- 	$.getJSON("/News/static/json/hots.json",function(data){
+ 	$.getJSON("..static/json/hots.json",function(data){
 		var $jsontip2 = $(".caijing_connect1");
 		var strHtml2 = "";//存储新闻热点数据的变量
 		$jsontip2.empty();//清空内容
