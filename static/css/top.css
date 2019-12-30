@@ -1,0 +1,279 @@
+.top {
+	margin:-2px 0 0 0;
+	padding:0 16px 0 16px;
+	position:fixed;
+	width: 100%;
+	height:56px;
+	border: 1px solid #ccc;
+	background-color:#ffffff;
+	box-shadow:0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
+}
+
+.top>div:nth-child(1) {
+	height:56px;width:20%;
+	display:flex;
+	float:left;
+	border: 0px solid yellow;
+}
+.hide_show {
+	padding:8px 8px 8px 0px;
+	margin-right:8px;
+	width:40px;
+	height:40px;
+	border: 0px solid green;
+	float: left;
+}
+.hide_show div {
+	width: 38px;
+	height:38px;
+	border: 0px solid blue;
+	border-radius:50%;
+	margin-left:5px;
+}
+.logo {
+	margin:16px 0px 0 0;
+	width:129px;
+	height:24px;
+	border:0px solid red;
+	float:left
+}
+.logo img {
+	width:80px;
+	height: 24px;
+	border: 0px solid green;
+	float: left;
+}
+
+/*搜索栏*/
+.top>div:nth-child(2) {
+	height:100%;
+	width:58%;
+	display:flex;
+	float:left;
+	border:0px solid black;
+}
+.top>div:nth-child(2) >div{
+	margin:12px 40px 0 40px;
+	display:flex;
+	width:92%;
+	height:32px;
+	border:0px solid blue;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top>div:nth-child(2) form{
+	width:100%;
+	height:32px;
+	display:flex;
+	border: 1px solid #cccccc;
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+.top>div:nth-child(2) form >div {
+	width:100%;
+	height:28px;
+	padding:2px 6px 2px 6px;
+	border-right:1px solid #cccccc;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*搜索按钮--放大镜*/
+.search {
+	width:100%;
+	height:24px;
+	font-size:16px;
+	outline: none;
+	border:none;
+	border:0px solid green;
+}
+.search-buttom {
+	padding:1px 6px 1px 6px;
+	border:0px solid red;
+	width:7%;
+	height: 32px;
+	float: right;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color:#f8f8f8;
+	border-top-right-radius:2px;
+	border-bottom-right-radius:2px;
+	outline:none;
+}
+.search-buttom div {
+	width: 100%;
+	height: 28px;
+	border:0px solid red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search-buttom div div{
+	width: 100%;
+	height: 20px;
+	border:0px solid red;
+	display: flex;
+}
+
+
+.top>div:nth-child(3) {
+	height:56px;
+	width:20%;
+	border:0px solid black;
+	display:flex;
+	float:right;
+}
+
+.top--right {
+	margin:6px 0px 0 0px;
+	width:98%;
+	height:40px;
+	display:flex;
+	border:0px solid red;
+
+}
+.top--right-1-4 {
+	margin:0px 3% 0 0px;
+	width:15%;
+	height:40px;
+	border:0px solid red;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top--right svg {
+	 pointer-events: none;
+	 display: block;
+	 width: 100%;
+	 height: 100%;
+}
+/*登录*/
+.top--right div:last-child {
+	margin:0px 0px 0 0px;
+	width:20%;
+	height:40px;
+	border:0px solid red;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top--right div:last-child div {
+	font-size:70%;
+	width:50%;
+	height: 19px;
+	border: 0px solid red;
+}
+
+/*mini登录窗口*/
+.mini-login {
+    display: none;
+	margin-top:15px;
+	margin-right:2%;
+	/*display:flex;*/
+	width:262px;
+	height:210px;
+	border:1px solid #ddd;
+	float:right;
+	background-color: white;
+}
+.mini-login a {
+	/*color: white;*/
+	text-decoration:none;
+}
+.mini-login a:hover {
+    display: block;
+}
+.mini-login> form {
+	margin-top:10px;
+	width:260px;
+	height:192px;
+	border:0px solid black;
+}
+.mini-login-ad{
+	margin-left:36px;
+	margin-top:16px;
+	width:190px;
+	height:30px;
+	justify-content: center;
+	align-items: center;
+	border:0px solid black;
+}
+.mini-login-pwd{
+	margin-left:36px;
+	margin-top:14px;
+	width:190px;
+	height:30px;
+	justify-content: center;
+	align-items: center;
+	border:0px solid black;
+}
+.mini-login-login{
+	border-radius:3px;
+	float:left;
+	margin-left:36px;
+	text-align:center;
+	color:white;
+	margin-top:14px;
+	width:88px;
+	height:30px;
+	background-color: rgb(94, 186, 109);
+	background-image: -webkit-linear-gradient(top, rgb(94, 186, 109), rgb(60, 160, 81));
+	border:1px solid #239438;
+	color: #fff;
+	line-height: 30px;
+	font-size:15px;
+}
+/*.mini-login> form >div:nth-child(3) a {*/
+	/*color: white;*/
+/*}*/
+.mini-login-register{
+	border-radius:3px;
+	float:left;
+	margin-left:10px;
+	text-align:center;
+	color:white;
+	margin-top:14px;
+	width:88px;
+	height:30px;
+	background-color: rgb(94, 186, 109);
+	background-image: -webkit-linear-gradient(top, rgb(94, 186, 109), rgb(60, 160, 81));
+	border: 1px solid #239438;
+	color: #fff;
+	line-height: 30px;
+	font-size:15px;
+}
+.mini-login-register a {
+	color: white;
+}
+.mini-login-forget{
+	font-size:12px;
+	margin-left:36px;
+	float:left;
+	margin-top:16px;
+	width:190px;
+	height:30px;
+	justify-content: center;
+	align-items: center;
+	border:0px solid black;
+}
+
+.tip {
+	font-size:18px;
+	color:red;
+	float:left;
+	width:190px;
+	height:30px;
+	margin-bottom:54px;
+	border:0px solid black;
+	margin-left:30px;
+	justify-content: center;
+	align-items: center;
+}

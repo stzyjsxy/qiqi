@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>分页的代码</title>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<style type="text/css">
+.box{
+	border:0px solid BLACK;
+	width:370px;/*调整显示区的宽*/
+	height:320px;
+}
+	
+#frameContent{
+	margin:7px 0 0 7px;
+	width:350px;/*调整显示区的宽*/
+	height:240px;/*调整显示区的高,显示6条记录*/
+	border:0px solid BLACK;
+	overflow-y:hidden;
+	word-break:break-all;
+ }
+ #frameContent>a{
+	 float:left;
+	color:royalblue;
+	font-size:15px;
+	line-height:30px;
+	width:330px;/*调整显示区的宽*/
+	height:30px;/*调整显示区的高*/
+	border:0px solid red;
+	text-decoration:none;
+	text-overflow: ellipsis; /*省略号*/
+	overflow-x: hidden;		/*水平超出部分隐藏*/
+	white-space: nowrap;  /*禁止换行*/
+	display: inline-block;
+  }
+ #frameContent >a:hover{
+	color:red;
+	text-decoration:underline;
+ }
+ #frameContent span{
+ 	float:left;
+ 	margin:7px 3px 0 0 ;
+ 	width:15px;
+ 	height:15px;
+ 	line-height:15px;
+ 	text-align: center;
+ 	font-size:12px;
+ 	background-color:#8eb9f5 ;
+ 	border:0px solid red;
+ 	color:white;
+ }
+ #frameContent span:nth-child(1){
+ 	background-color: red;
+ }
+ #frameContent span:nth-child(3){
+ 	background-color: #ff8547;
+ }
+ #frameContent span:nth-child(5){
+ 	background-color: #ffac38;
+ }
+ 
+ 
+ #pages a{
+     font-size:12px;
+     color:green;
+     text-decoration:none;
+ }
+ #pages a:hover{
+     font-size:12px;
+     color:blue;
+     text-decoration:none;
+ }
+ </style>
+
+</head>
+<script>
+ 	//加载热点新闻列表
+	$.getJSON("/News/static/json/hots.json",function(data){
+		var $jsontip = $(".content-right-content");
+		var strHtml = "";//存储数据的变量
+		var id=0;			//存储新闻id
+		$jsontip.empty();//清空内容
+		$.each(data,function(infoIndex,info){
+				id++;
+			    strHtml += "<span>"+id+"</span>" +"<a href='" + info["url"]+"'"  + " title='"
+				+ info["title"]+"'" + " class='haha'>" +info["title"]+"<br>"+"</a>"; 
+		});
+		$jsontip.html(strHtml);//显示处理后的数据	
+	});
+ </script>
+ 
+<body>
+<div class="box">
+	<div id="frameContent" class="content-right-content"></div>              
+	<div id="pages" style="font-size:12px; width:255px; line-height:40px; text-align:center;"></div>
+</div>
+
+
+<script src="/News/static/js/分页.js"></script>
+</body>
+</html>

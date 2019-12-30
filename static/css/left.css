@@ -1,0 +1,188 @@
+.home_page home_page-1 svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#shouye {
+	padding:0 24px 0 24px;
+	margin-top:68px;
+	width:100%;
+	height:40px;
+	border: 0px solid red;
+    background-color:#e4e4e4; 
+
+}
+#shouye > div {
+	width:192px;
+	height:40px;
+	border: 0px solid green;
+	display: flex;
+	align-items: center;
+}
+#shouye>div>div:first-child{
+	margin-right:24px;
+	width:24px;
+	height: 24px;
+	border: 0px solid red;
+	float: left;
+}
+#shouye>div>div:last-child{
+	width:120px;height:25px;
+	margin-right:24px;
+	border: 0px solid black;
+	float:left;
+	font-size: 14px;
+	line-height: 24px;
+}
+/*为您推荐*/
+#tuijian {
+	padding:0 24px 0 24px;
+	margin-top:0px;
+	width:240px;
+	height:40px;
+	border: 0px solid red;
+	b-ackground-color:#dcdcdc;
+}
+#tuijian>div {
+	width:192px;
+	height:40px;
+	border: 0px solid green;
+	display: flex;
+	align-items: center;
+}
+#tuijian>div>div:first-child{
+	margin-right:24px;
+	width:24px;
+	height: 24px;
+	border: 0px solid red;
+	float: left;
+}
+#tuijian >div>div:last-child {
+	width:120px;
+	height:25px;
+	margin-right:24px;
+	border: 0px solid black;
+	float:left;
+	font-size: 14px;
+	line-height: 24px;
+}
+/*收藏夹*/
+#shoucang {
+	padding:0 24px 0 24px;
+	margin:0px 0px 10px 0px;
+	width:240px;
+	height:40px;
+	border: 0px solid red;
+	b-ackground-color:#dcdcdc;
+}
+#shoucang>div {
+	width:192px;
+	height:40px;
+	border: 0px solid green;
+	display: flex;
+	align-items: center;
+}
+#shoucang>div>div:first-child{
+	margin-right:24px;
+	width:24px;
+	height: 24px;
+	border: 0px solid red;
+	float: left;
+}
+
+#shoucang >div>div:last-child {
+	width:120px;
+	height:25px;
+	margin-right:24px;
+	border: 0px solid black;
+	float:left;
+	font-size: 14px;
+	line-height: 24px;
+}
+.choice {
+	padding-top:8px;
+	width:240px;
+	height:35px;
+	border:0px solid red;
+}
+.choice div {
+	border:0px solid red;
+	width:192px;height:19px;
+	padding:8px 24px 8px 24px;
+}
+.choice-content {
+	width:240px;
+	height:280px;
+	border: 0px solid red;
+	font-size: 15px;
+}
+/*七七精选导航的第一个div*/
+.choice-content-first-div {
+	padding:0 24px 0 24px;
+	margin:0px;
+	width:240px;
+	height:40px;
+	border: 0px solid red;
+}
+.choice-content-first-div >div{
+	width:192px;
+	height:40px;
+	border: 0px solid green;
+	display: flex;
+	align-items: center;
+}
+.choice-content-first-div >div>div:first-child {
+	margin-right:24px;
+	width:24px;
+	height: 24px;
+	border: 0px solid red;
+	float: left;
+}
+.choice-content-first-div >div>div:last-child {
+	width:120px;
+	height:25px;
+	margin-right:24px;
+	border: 0px solid black;
+	float:left;
+	font-size: 15px;
+	line-height: 24px;
+	font-size: 14px;
+}
+
+a{text-decoration:none;color:black;}  
+a:hover {text-decoration:none;color:red;}  
+.choice-content-first-div:hover {color:red;background-color:#cccccc;} 
+.jq-dom-bkcolor:hover{color:red;background-color:#cccccc;}
+
+.jq-dom-bkcolor:hover svg{fill:red;}
+
+.choice-content img {
+	height:24px;
+	width:24px;
+	border-radius:50%;
+}
+.copyright {
+	border:0px solid black;
+	width:100%;
+	padding:0 0 0 10px;
+	l-ine-height: 24px;
+	margin: 130% 0 30px 0;
+	font-size:12px;
+	color: black;
+	align-items: center;
+}
+
+
+/*菜单栏图标css3动画效果*/
+.noDataImg{
+    -webkit-transform: rotate(360deg);
+    animation: rotation 2s linear infinite;
+    -moz-animation: rotation 2s linear infinite;
+    -webkit-animation: rotation 2s linear infinite;
+    -o-animation: rotation 2s linear infinite;
+  }
+  @-webkit-keyframes rotation{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+  }
