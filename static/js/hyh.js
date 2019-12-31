@@ -9,7 +9,7 @@
 	//alert(obj.scrollHeight);
 	//pages.innerHTML = "<b>共"+allpages+"页</b> ";     //输出页面数量	 
 	//pages.innerHTML = "<b>当前第"+ pgindex +"页</b> ";
- 	 pages.innerHTML += "  <a href=\"javascript:gotopage('1');\">换一换 <img alt=\"change\" src=\"../static/img/change.png\" width=15px></a>"
+ 	 pages.innerHTML += "  <a href=\"javascript:gotopage('1');\">换一换 <img alt=\"change\" src=\"../static/img/change.png\" width=15px ></a>"
 	
   }
   function gotopage(value){

@@ -7,62 +7,106 @@
 		<script src="../static/js/news-connent.js"></script>
 	</head>
 	<link rel="stylesheet" type="text/css" href="../static/css/content.css">
-<style>
-
-</style>
 <script>
 	$(function(){
-		var obj = document.getElementById("caijing_connect1");
-		$(".news-title-box-left li").hover(function(){
-		$(this).addClass('bd');
-		},function(){
-			$(this).removeClass('bd');
+		/*标题鼠标点击添加上边框样式*/
+		$(".news-title-box-left li").click(function(){
+		$(this).css("margin-top","-2px").siblings().css("margin-top","-1px"); 
+		$(this).css("border-top","2px solid red").siblings().css("border-top","1px solid #dadce0"); 
 		}
 		);
+		
 		//滑过其他标签，往上移动，显示第二屏
-		$(".caijing_title1 ").click(function(){
+		//科技--显示第二屏
+		$(".science_title1 ").click(function(){//财经
 			setTimeout(function(){
-				$(".caijing_connect1").scrollTop(0);
+				$(".science_connect1").scrollTop(0);
 			},100);
-			
 		}
 		);
-		$(".caijing_title2 ").click(function(){
+		$(".science_title2 ").click(function(){
 			setTimeout(function(){
-				$(".caijing_connect1").scrollTop(388);
+				$(".science_connect1").scrollTop(388);
+			},100);
+		}
+		);
+		//娱乐--显示第二屏
+		$(".fun_title1 ").click(function(){//财经
+			setTimeout(function(){
+				$(".fun_connect1").scrollTop(0);
+			},100);
+		}
+		);
+		$(".fun_title2 ").click(function(){
+			setTimeout(function(){
+				$(".fun_connect1").scrollTop(388);
+			},100);
+		}
+		);
+		
+		//财经--显示第二屏
+		$(".business_title1 ").click(function(){//财经
+			setTimeout(function(){
+				$(".business_connect1").scrollTop(0);
+			},100);
+		}
+		);
+		$(".business_title2 ").click(function(){
+			setTimeout(function(){
+				$(".business_connect1").scrollTop(388);
 			},100);
 		}
 		);
 	});
 </script>
 <script>
- 	//加载热点新闻列表
- 	$.getJSON("../static/json/hots.json",function(data){
-		var $jsontip2 = $(".caijing_connect1");
-		var strHtml2 = "";//存储新闻热点数据的变量
-		$jsontip2.empty();//清空内容
+	//加载科技新闻列表
+	$.getJSON("../static/json/science.json",function(data){
+		var $science = $(".science_connect1");
+		var sciencestrHtml = "";//存储新闻热点数据的变量
+		$science.empty();//清空内容
 		$.each(data,function(infoIndex,info){
-			    strHtml2 +="<li>"+"<a href='" +info["url"] +"'target='_blank'>"+info["title"]+"<br>"+"</a>"+"</li>"; 
+			    sciencestrHtml +="<li>"+"<a href='" +info["url"] +"'" +"target='_blank'>"+info["title"]+"<br>"+"</a>"+"</li>"; 
 		});
-		$jsontip2.html(strHtml2);//显示处理后的数据	
-		
+		$science.html(sciencestrHtml);//显示处理后的数据	
+	});
+	//加载娱乐新闻列表
+	$.getJSON("../static/json/fun.json",function(data){
+		var $fun = $(".fun_connect1");
+		var funstrHtml = "";//存储新闻热点数据的变量
+		$fun.empty();//清空内容
+		$.each(data,function(infoIndex,info){
+			    funstrHtml +="<li>"+"<a href='" +info["url"] +"'" +"target='_blank'>"+info["title"]+"<br>"+"</a>"+"</li>"; 
+		});
+		$fun.html(funstrHtml);//显示处理后的数据	
+	});
+ 	//加载财经新闻列表
+ 	$.getJSON("../static/json/business.json",function(data){
+		var $business = $(".business_connect1");
+		var businessstrHtml = "";//存储新闻热点数据的变量
+		$business.empty();//清空内容
+		$.each(data,function(infoIndex,info){
+			    businessstrHtml +="<li>"+"<a href='" +info["url"] +"'" +"target='_blank'>"+info["title"]+"<br>"+"</a>"+"</li>"; 
+		});
+		$business.html(businessstrHtml);//显示处理后的数据	
  	});
+	
+	
  </script>
 	<body>
+		<!--科技-->
 		<div class="first-news">
 			<!--标题栏-->
-			<div class="caijing_list">
+			<div class="science_list">
 				<ul	id="news-title-box-left" class="news-title-box-left">
-					<li id="caijing_title1" class="caijing_title1">
-						<a  style="font-size: 24px;" >财经</a>
+					<li id="science_title1" class="science_title1 bd">
+						<a  style="font-size: 24px;" >科技</a>
 					</li>
 		
-					<li id="caijing_title2" class="caijing_title2">
-						<a >股票</a>
+					<li id="science_title2" class="science_title2">
+						<a >手机</a>
 					</li>
-					<li id="caijing_title3" class="caijing_title3">
-						<a >商业</a>
-					</li>
+					
 				</ul>
 			</div>
 			<!--主要内容-->
@@ -86,8 +130,8 @@
 				<!--中-->
 				<div class="news-main-content-center">
 					<!--财经-->
-					<div id="caijing_connect1" >
-						<ul class="caijing_connect1">
+					<div id="science_connect1" >
+						<ul class="science_connect1">
 							
 						</ul>
 					</div>
@@ -95,19 +139,65 @@
 				</div>
 			</div>
 		</div>
-
+		
+		<!--娱乐-->
 		<div class="other-news">
 			<!--标题栏-->
-			<div class="caijing_list">
+			<div class="fun_list">
 				<ul	id="news-title-box-left" class="news-title-box-left">
-					<li id="caijing_title1" class="caijing_title1">
-						<a  style="font-size: 24px;" >财经</a>
+					<li id="fun_title1" class="fun_title1 bd">
+						<a style="font-size: 24px;" >娱乐</a>
 					</li>
 		
-					<li id="caijing_title2" class="caijing_title2">
+					<li id="fun_title2" class="fun_title2">
+						<a >影视</a>&nbsp/&nbsp
+						<a >音乐</a>
+					</li>
+				</ul>
+			</div>
+			<!--主要内容-->
+			<div class="news-main-content" >
+				<!--左-->
+				<div class="news-main-content-left" >
+					<div>
+						<a href="">
+							<img src="http://cms-bucket.nosdn.127.net/2018/12/28/e4c33764df02439e965a9d0ad3635e58.jpeg?imageView&thumbnail=200y125&quality=85" alt="报名开启！大咖带你遇见科技未来" style="width:200px;height:125px;border:0px solid blue;">
+						</a>
+						<h3>报名开启！大咖带你遇见科技未来</h3>
+					</div>
+		
+					<div>
+						<a href="">
+							<img src="http://cms-bucket.nosdn.127.net/2019/01/03/71a763c1187547208e5cddf4cfefa92e.jpeg?imageView&thumbnail=200y125&quality=85" style="width:200px;height:125px;border:0px solid blue;">
+						</a>
+						<h3>泸指冲高回落收跌0.04% 军工股掀涨停潮</h3>
+					</div>
+				</div>
+				<!--中-->
+				<div class="news-main-content-center">
+					<!--财经-->
+					<div id="fun_connect1" >
+						<ul class="fun_connect1">
+							
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<!--财经-->
+		<div class="other-news">
+			<!--标题栏-->
+			<div class="business_list">
+				<ul	id="news-title-box-left" class="news-title-box-left">
+					<li id="business_title1" class="business_title1 bd">
+						<a style="font-size: 24px;" >财经</a>
+					</li>
+					<li id="business_title2" class="business_title2">
 						<a >股票</a>
 					</li>
-					<li id="caijing_title3" class="caijing_title3">
+					<li id="business_title3" class="business_title3">
 						<a >商业</a>
 					</li>
 				</ul>
@@ -133,14 +223,15 @@
 				<!--中-->
 				<div class="news-main-content-center">
 					<!--财经-->
-					<div id="caijing_connect1" >
-						<ul class="caijing_connect1">
-							
+					<div id="business_connect1" >
+						<ul class="business_connect1">
 						</ul>
 					</div>
 					
 				</div>
 			</div>
-		</div>				
+		</div>
+						
+			
 	</body>
 </html>

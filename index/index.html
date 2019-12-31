@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>七七新闻网</title>
-	<link rel="icon" href="/static/img/Spider.ico" type="image/x-icon" />
+	<link rel="icon" href="../static/img/Spider.ico" type="image/x-icon" />
 	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 	<script src="../static/js/jquery-left.js"></script>
 	<script src="../static/js/miniLogin.js"></script>
@@ -28,16 +28,16 @@
 <script>
  	//加载热点新闻列表
  	$.getJSON("../static/json/hots.json",function(data){
- 		var $jsontip = $(".frameContent");
- 		var strHtml = "";//存储新闻热点数据的变量
+ 		var $hots = $(".frameContent");
+ 		var hotsstrHtml = "";//存储新闻热点数据的变量
 		var id=0;			//存储新闻id
- 		$jsontip.empty();//清空内容
+ 		$hots.empty();//清空内容
  		$.each(data,function(infoIndex,info){
 				id++;
- 			    strHtml += "<span>"+id+"</span>" +"<a href='" + info["url"]+"'"  + " title='"
+ 			    hotsstrHtml += "<span>"+id+"</span>" +"<a href='" + info["url"]+"'"  + " title='"
 				+ info["title"]+"'" + " class='haha'>" +info["title"]+"<br>"+"</a>"; 
  		});
- 		$jsontip.html(strHtml);//显示处理后的数据			
+ 		$hots.html(hotsstrHtml);//显示处理后的数据			
  	});
  </script>
 <body style="background-color: #fafafa" >
@@ -301,7 +301,7 @@
 				</div>
 			</div>
 
-			<!--第1块新闻-财经-->
+			<!--要闻模块-->
 			<iframe src="news-body-content.html" scrolling=no
 					width="100%" height="100%" frameborder="0"  name="childPage">
 			</iframe>

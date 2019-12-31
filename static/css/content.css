@@ -4,11 +4,11 @@
 
 /*要闻*/
 .content {
-	margin:58px 0px 0 280px;
+	margin:58px 0px 0 18%;
 	padding:16px 32px 32px 32px;
 	display:flex;
 	width:638px;
-	height:1100px;
+	height:1600px;
 	border:0px solid red;
 	background-color: #fafafa;
 	float:left;
@@ -37,13 +37,13 @@
 
 
 
-/*<!--第4块新闻--财经-->*/
+/*<!--新闻内容-->*/
 .first-news {
 	margin-top:70px;
 }
 .other-news {
 	position: relative;
-	margin-top:90px;
+	margin-top:60px;
 }
 /*统一新闻主体模块的宽高border:1px solid #dadce0;*/
 .first-news,
@@ -52,20 +52,36 @@
 	height:435px;
 	border-top:1px solid #dadce0;
 }
-.caijing_title1{
+.business_title1{
 	border-top:-2px solid #dadce0;
 }
 
 /*新闻栏目标题 财经/股票/商业-->*/
-.caijing_list {
+.science_list,
+.fun_list,
+.business_list {
 	width:626px;
 	height:54px;
 	border:0px solid blue;
 }
-.caijing_list a:hover{
-	color:red;
+/*默认标题上边距样式*/
+.science_list li:first-child,
+.fun_list li:first-child,
+.business_list li:first-child{
+	margin-top:-2px;
+	border-top:2px solid red;
 }
-.caijing_list ul{
+/*伪类鼠标滑过标题变红*/
+.science_list a:hover,
+.fun_list a:hover,
+.business_list a:hover{
+	color:red;
+	margin-top:-2px;
+	border-top:2px solid red;
+}
+.science_list ul,
+.fun_list ul,
+.business_list ul{
 	padding:0;
 	margin:0;
 }
@@ -82,10 +98,7 @@
 	text-decoration:none;
 	color:black;
 }
-.bd{/*标题鼠标移过添加上边框样式*/
-	margin-top:-2px;
-	border-top:2px solid red;
-}
+
 
 
 /*要闻模块的每一个主体新闻列表*/
@@ -173,7 +186,7 @@
 .content-right {
 	background-color:#f3f3f3;
 	float:right;
-	margin:63px 0 0 60px;
+	margin:74px 0 0 60px;
 	border:0px solid black;
 	border-radius:8px;
 	width:292px;
