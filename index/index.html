@@ -5,15 +5,15 @@
 	<title>七七新闻网</title>
 	<link rel="icon" href="../static/img/Spider.ico" type="image/x-icon" />
 	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-	<script src="/static/js/jquery-left.js"></script>
-	<script src="/static/js/miniLogin.js"></script>
+	<script src="../static/js/jquery-left.js"></script>
+	<script src="../static/js/miniLogin.js"></script>
 </head>
 <link rel="stylesheet" type="text/css" href="../static/css/index.css">
 <link rel="stylesheet" type="text/css" href="../static/css/left.css">
 <link rel="stylesheet" type="text/css" href="../static/css/top.css">
 <link rel="stylesheet" type="text/css" href="../static/css/content.css">
-<script type="text/javascript" charset="utf-8"  src="/static/js/L2Dwidget.0.min.js"></script>
-<script type="text/javascript" charset="utf-8"  src="/static/js/L2Dwidget.min.js"></script>
+<script type="text/javascript" charset="utf-8"  src="1../static/js/L2Dwidget.0.min.js"></script>
+<script type="text/javascript" charset="utf-8"  src="1../static/js/L2Dwidget.min.js"></script>
 <script type="text/javascript">
 	L2Dwidget.init({"display": {
 		"superSample": 2,
@@ -27,17 +27,17 @@
 </script>
 <script>
  	//加载热点新闻列表
- 	$.getJSON("/static/json/hots.json",function(data){
- 		var $jsontip = $(".frameContent");
- 		var strHtml = "";//存储新闻热点数据的变量
+ 	$.getJSON("../static/json/hots.json",function(data){
+ 		var $hots = $(".frameContent");
+ 		var hotsstrHtml = "";//存储新闻热点数据的变量
 		var id=0;			//存储新闻id
- 		$jsontip.empty();//清空内容
+ 		$hots.empty();//清空内容
  		$.each(data,function(infoIndex,info){
 				id++;
- 			    strHtml += "<span>"+id+"</span>" +"<a href='" + info["url"]+"'"  + " title='"
+ 			    hotsstrHtml += "<span>"+id+"</span>" +"<a href='" + info["url"]+"'"  + " title='"
 				+ info["title"]+"'" + " class='haha'>" +info["title"]+"<br>"+"</a>"; 
  		});
- 		$jsontip.html(strHtml);//显示处理后的数据			
+ 		$hots.html(hotsstrHtml);//显示处理后的数据			
  	});
  </script>
 <body style="background-color: #fafafa" >
@@ -301,7 +301,7 @@
 				</div>
 			</div>
 
-			<!--第1块新闻-财经-->
+			<!--要闻模块-->
 			<iframe src="news-body-content.html" scrolling=no
 					width="100%" height="100%" frameborder="0"  name="childPage">
 			</iframe>
@@ -323,7 +323,7 @@
 			<div id="frameContent" class="frameContent" class="content-right-content"></div>
 		</div>
 	</div>
-	<script src="/static/js/hyh.js"></script>
+	<script src="../static/js/hyh.js"></script>
 	<script>
 	 
 	</script>		
