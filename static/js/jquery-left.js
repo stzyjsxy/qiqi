@@ -1,7 +1,7 @@
 $(function(){
 		//显示、隐藏左栏目--
 		$(".hide_show").click(function(){
-			$(".home_page").toggle(200);
+			$(".menu_page").toggle(200);
 		}),
 		//菜单按钮的背景事件
 		$("#hide_show_bg").hover(
@@ -17,8 +17,7 @@ $(function(){
 		
 		
 });	
-		
-//----------------------------------
+
 	
 	
 
