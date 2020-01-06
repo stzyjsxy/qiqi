@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../static/css/today-hots.css">
+
+<style type="text/css">
+	.bg{
+		background:url(../static/img/today-news-bg.png) repeat ;
+	}
+</style>
+<!--左侧图片放大样式-->							 
+
+<script>
+$(function(){
+	$(".news-box").mouseover(function(){
+	    $(this).css("border-color","#159b46");
+		$(this).addClass("bg");
+	  });
+	  $(".news-box").mouseout(function(){
+	    $(this).css("border-color","#dedee0");
+		$(this).removeClass("bg");
+	  });
+	
+	
+});
+</script>	
+<script>
+$(function(){
+
+	$('.pic').hover(function(){
+		 $(this).animate({width:"210px",height:"140px",left:"-10px",top:"-10"},400);
+	},function(){
+		 $(this).animate({width:"190px",height:"120px",left:"0px",top:"0"},400);
+	});
+
+});
+</script>
+
+<body>
+	<div id="today_news">
+		<!--标题-->
+		<div id="big-title">今日热点</div>
+		<!--热点列表-->
+		<div class="news-box">
+			<div class="news-img"><!--左图-->
+				<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">
+					<img class="pic" src="http://cms-bucket.ws.126.net/2020/0106/ef76f1b8p00q3nrya000qc0009c005uc.png?imageView&amp;thumbnail=190y120" alt="三星2月11日办发布会 Galaxy S20和新折叠机来了？">
+				</a>
+			</div>
+			<div class="news-demo"><!--右标题及内容-->
+				<div class="news_title"><!--标题-->
+					<h3>
+						<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">三星2月11日办发布会 Galaxy S20和新折叠机来了？</a>
+					</h3>
+				</div>
+				<div class="news_from"><!--来源-->
+					<strong class="barlink"><a href="">IT业界</a></strong>
+					<div class="keywords">
+						<a href="http://tech.163.com/keywords/4/0/4e09661f/1.html">三星</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">智能手机</a>
+					</div>
+					<span class="time">3小时前</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="news-box">
+			<div class="news-img"><!--左图-->
+				<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">
+					<img class="pic" src="http://cms-bucket.ws.126.net/2020/0106/7b0e4e58p00q3nqfp00mvc000s600e3c.png?imageView&thumbnail=190y120" alt="三星2月11日办发布会 Galaxy S20和新折叠机来了？">
+				</a>
+			</div>
+			<div class="news-demo"><!--右标题及内容-->
+				<div class="news_title"><!--标题-->
+					<h3>
+						<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">CES将开幕 华为等数百家中国企业将集体亮相</a>
+					</h3>
+				</div>
+				<div class="news_from"><!--来源-->
+					<strong class="barlink"><a href="">其他</a></strong>
+					<div class="keywords">
+						<a href="http://tech.163.com/keywords/4/0/4e09661f/1.html">雷军</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">卢伟冰</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">小米</a>
+					</div>
+					<span class="time">3小时前</span>
+				</div>
+			</div>
+		</div>
+	
+		<div class="news-box">
+			<div class="news-img"><!--左图-->
+				<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">
+					<img class="pic" src="http://cms-bucket.ws.126.net/2020/0106/ef76f1b8p00q3nrya000qc0009c005uc.png?imageView&amp;thumbnail=190y120" alt="三星2月11日办发布会 Galaxy S20和新折叠机来了？">
+				</a>
+			</div>
+			<div class="news-demo"><!--右标题及内容-->
+				<div class="news_title"><!--标题-->
+					<h3>
+						<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">三星2月11日办发布会 Galaxy S20和新折叠机来了？</a>
+					</h3>
+				</div>
+				<div class="news_from"><!--来源-->
+					<strong class="barlink"><a href="">IT业界</a></strong>
+					<div class="keywords">
+						<a href="http://tech.163.com/keywords/4/0/4e09661f/1.html">三星</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">智能手机</a>
+					</div>
+					<span class="time">3小时前</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="news-box">
+			<div class="news-img"><!--左图-->
+				<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">
+					<img class="pic" src="http://cms-bucket.ws.126.net/2020/0106/ef76f1b8p00q3nrya000qc0009c005uc.png?imageView&amp;thumbnail=190y120" alt="三星2月11日办发布会 Galaxy S20和新折叠机来了？">
+				</a>
+			</div>
+			<div class="news-demo"><!--右标题及内容-->
+				<div class="news_title"><!--标题-->
+					<h3>
+						<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">三星2月11日办发布会 Galaxy S20和新折叠机来了？</a>
+					</h3>
+				</div>
+				<div class="news_from"><!--来源-->
+					<strong class="barlink"><a href="">IT业界</a></strong>
+					<div class="keywords">
+						<a href="http://tech.163.com/keywords/4/0/4e09661f/1.html">三星</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">智能手机</a>
+					</div>
+					<span class="time">3小时前</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="news-box">
+			<div class="news-img"><!--左图-->
+				<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">
+					<img class="pic" src="http://cms-bucket.ws.126.net/2020/0106/ef76f1b8p00q3nrya000qc0009c005uc.png?imageView&amp;thumbnail=190y120" alt="三星2月11日办发布会 Galaxy S20和新折叠机来了？">
+				</a>
+			</div>
+			<div class="news-demo"><!--右标题及内容-->
+				<div class="news_title"><!--标题-->
+					<h3>
+						<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">三星2月11日办发布会 Galaxy S20和新折叠机来了？</a>
+					</h3>
+				</div>
+				<div class="news_from"><!--来源-->
+					<strong class="barlink"><a href="">IT业界</a></strong>
+					<div class="keywords">
+						<a href="http://tech.163.com/keywords/4/0/4e09661f/1.html">三星</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">智能手机</a>
+					</div>
+					<span class="time">3小时前</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="news-box">
+			<div class="news-img"><!--左图-->
+				<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">
+					<img class="pic" src="http://cms-bucket.ws.126.net/2020/0106/ef76f1b8p00q3nrya000qc0009c005uc.png?imageView&amp;thumbnail=190y120" alt="三星2月11日办发布会 Galaxy S20和新折叠机来了？">
+				</a>
+			</div>
+			<div class="news-demo"><!--右标题及内容-->
+				<div class="news_title"><!--标题-->
+					<h3>
+						<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">三星2月11日办发布会 Galaxy S20和新折叠机来了？</a>
+					</h3>
+				</div>
+				<div class="news_from"><!--来源-->
+					<strong class="barlink"><a href="">IT业界</a></strong>
+					<div class="keywords">
+						<a href="http://tech.163.com/keywords/4/0/4e09661f/1.html">三星</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">智能手机</a>
+					</div>
+					<span class="time">3小时前</span>
+				</div>
+			</div>
+		</div>
+		
+	</div> 
+	
+															
+		
+
+
+
+	</body>
+</html>
