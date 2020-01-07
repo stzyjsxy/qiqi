@@ -1,0 +1,120 @@
+/*主页左侧导航栏菜单按钮*/
+#hide_show_bg:active{/*菜单栏点击显示按钮背景色*/
+	background-color: #cccccc;
+}
+/*菜单按钮页*/
+#menu_page{
+	width:242px;
+	height:100%;
+	border: 0px solid red;
+	background-color:#f5f5f5;
+	position:fixed;
+	overflow: hidden;
+}
+#menu_page:hover{/*显示滚动条*/
+	overflow-y: scroll;
+}
+
+.menu_page-1::-webkit-scrollbar {/*滚动条*/
+    width: 12px;     /*滚动条的宽，瘦胖设置*/
+}
+.menu_page-1::-webkit-scrollbar-thumb {
+    background: #dcdcdc;
+}
+.menu_page-1::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    background: #EDEDED;
+}
+#first-page {
+	justify-content: center;
+	padding:0 0 0 26px;
+	margin-top:68px;
+	width:100%;
+	height:40px;
+	border: 0px solid red;
+    background-color:#e4e4e4; 
+}
+#first-page div:first-child{
+	margin:7px 16px 7px 0;
+	width:24px;
+	height: 24px;
+	border: 0px solid red;
+	float: left;
+}
+#first-page div:last-child{
+	display:flex;
+	height:24px;
+	margin:7px 0px 7px 0;
+	border: 0px solid black;
+	float:left;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+/*为您推荐;收藏夹*/
+.next-page{
+	justify-content: center;
+	padding:0 0 0 26px;
+	width:100%;
+	height:40px;
+}
+.next-page div:first-child{
+	margin:7px 16px 7px 0;
+	width:24px;
+	height:24px;
+	float: left;
+	border:0px solid red;
+}
+.next-page div:last-child{
+	border:0px solid red;
+	display:flex;
+	height:24px;
+	margin:7px 0px 7px 0;
+	float:left;
+	font-size: 14px;
+	line-height: 24px;
+}
+.choice {
+	width:100%;
+	height:35px;
+	border:0px solid red;
+	font-size:16px;
+	font-weight:800;
+	padding:16px 24px 0px 14px;	
+}
+.menu_page a{text-decoration:none;color:black;}  
+.menu_page a:hover {color:red;}  
+
+.jq-dom-bkcolor:hover{background-color:#cccccc !important;}
+.jq-dom-bkcolor:hover svg{fill:red !important;}
+
+
+
+.next-page img {
+	height:24px;
+	width:24px;
+	border-radius:50%;
+}
+
+/*版权*/
+.copyright {
+	border:0px solid black;
+	width:100%;
+	margin:390px 0 20px 0;
+	
+	font-size:12px;
+	
+}
+
+
+/*菜单栏图标css3动画效果*/
+.noDataImg{
+    -webkit-transform: rotate(360deg);
+    animation: rotation 2s linear infinite;
+    -moz-animation: rotation 2s linear infinite;
+    -webkit-animation: rotation 2s linear infinite;
+    -o-animation: rotation 2s linear infinite;
+  }
+  @-webkit-keyframes rotation{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+  }

@@ -1,0 +1,281 @@
+*{
+	margin:0;
+}
+
+/*要闻*/
+.content {
+	margin:58px 0 0 272px;
+	padding:16px 32px 32px 32px;
+	display:flex;
+	width:638px;
+	height:1600px;
+	border:0px solid red;
+	background-color: #fafafa;
+	float:left;
+}
+
+.top-news-title {
+	margin-top:28.8px;
+	width:638px;
+	height:27px;
+	border:0px solid blue;
+}
+.top-news-title div:first-child {
+	width:536px;
+	height:27px;
+	border:0px solid red;
+	float:left;
+}
+.top-news-title div:last-child {
+	width: 98px;
+	height:18px;
+	margin-top:8px;
+	float:left;
+	border:0px solid blue;
+	font-size: 14px;
+}
+
+
+
+/*<!--新闻内容-->*/
+.first-news {
+	margin-top:70px;
+}
+.other-news {
+	position: relative;
+	margin-top:60px;
+}
+/*统一新闻主体模块的宽高border:1px solid #dadce0;*/
+.first-news,
+.other-news{
+	width:628px;
+	height:435px;
+	border-top:1px solid #dadce0;
+}
+.business_title1{
+	border-top:-2px solid #dadce0;
+}
+
+/*新闻栏目标题 财经/股票/商业-->*/
+.science_list,
+.fun_list,
+.business_list {
+	width:626px;
+	height:54px;
+	border:0px solid blue;
+}
+/*默认标题上边距样式*/
+.science_list li:first-child,
+.fun_list li:first-child,
+.business_list li:first-child{
+	margin-top:-2px;
+	border-top:2px solid red;
+}
+/*伪类鼠标滑过标题变红*/
+.science_list a:hover,
+.fun_list a:hover,
+.business_list a:hover{
+	color:red;
+	margin-top:-2px;
+	border-top:2px solid red;
+}
+
+.science_list ul,
+.fun_list ul,
+.business_list ul{
+	padding:0;
+	margin:0;
+}
+.news-title-box-left *{
+	width:100px;
+	height:45px;
+	font-size: 18px;
+	line-height: 43px;
+	text-align: center;
+	float:left;
+	list-style-type:none;
+}
+.news-title-box-left a{
+	text-decoration:none;
+	color:black;
+}
+
+
+
+/*要闻模块的每一个主体新闻列表*/
+.news-main-content {/*外盒*/
+	width:624px;
+	height:380px;
+	border:0px solid red;
+	float:left;
+}
+.news-main-content-left {/*外盒->左盒*/
+	border:0px solid red;
+	width:200px;
+	height:376px;
+	float:left
+}
+.news-main-content-left div:first-child {/*外盒->左盒->上图*/
+	border:0px solid red;
+	width:200px;
+	height:186px
+}
+.news-main-content-left div:last-child {/*外盒->左盒->下图*/
+	border:0px solid red;
+	width:200px;
+	height:190px
+}
+.news-main-content-left h3 {/*外盒->左盒->图下文字*/
+	margin-top:9px;
+	width:200px;
+	border:0px solid red;
+	font-size:14px;
+}
+.news-main-content-center {/*外盒->右盒:12条新闻数据盒*/
+	width:422px;
+	height:376px;
+	border:0px solid red;
+	float:right;
+	
+}
+
+.news-main-content-center ul{
+	width:400px;
+	height:386px;
+	margin-top:-10px;
+	padding-left:25px;
+	border:0px solid blue;	
+	text-overflow: ellipsis; /*省略号*/
+	overflow: hidden;		/*水平超出部分隐藏*/
+	white-space: nowrap;  /*禁止换行*/
+}
+
+.news-main-content-center ul li *{
+	text-decoration:none;
+	color:#404040;
+	margin-left:-6px;
+	font-size:16px;
+	line-height:32px;
+	border:0px solid blue;
+	
+}
+.news-main-content-center ul li a:hover {
+	
+	color:#4285f4;
+	font-weight:600;
+	text-decoration:none;
+}
+.news-main-content-center li:nth-child(1) a,
+.news-main-content-center li:nth-child(7) a,
+.news-main-content-center li:nth-child(13) a,
+.news-main-content-center li:nth-child(19) a{
+	font-size: 17px;
+	color:#404040;
+	font-weight:600;
+}
+.news-main-content-center li:nth-child(7),
+.news-main-content-center li:nth-child(19){
+	margin-top:4px;
+}
+
+/*新闻热点*/
+.content-right {
+	background-color:#f3f3f3;
+	float:right;
+	margin:74px 0 0 60px;
+	border:0px solid black;
+	border-radius:8px;
+	width:292px;
+	height:314px;
+	
+}
+.content-right-title {
+	float:left;
+	border-bottom:1px solid #dcdcdc;
+	width:260px;
+	height:48px;
+	margin:0 16px 0 16px;
+	padding-top:2.8px;
+}
+.content-right-title >div{
+	float:left;
+	margin-top:13px;
+	border:0px solid black;
+	width:260px;
+	height:22px
+}
+
+.content-right-title >div >div{
+	float:left;
+	font-size:18px;
+	border:0px solid blue;
+	
+}
+.content-right-title >div >div:last-child {
+	float:right;
+	font-size:14px;
+}
+
+
+#frameContent{
+	float:left;
+	margin:10px 0 0 16px;
+	width:272px;/*调整显示区的宽*/
+	height:240px;/*调整显示区的高,显示6条记录*/
+	border:0px solid BLACK;
+	overflow-y: hidden;		/*超出部分垂直方向都隐藏*/
+	
+ }
+#frameContent>a{
+	float:left;
+	font-size:14px;
+	line-height:30px;
+	width:252px;/*调整显示区的宽*/
+	height:30px;/*调整显示区的高*/
+	border-top:0px solid blue;
+	text-overflow: ellipsis; /*省略号*/
+	overflow-x: hidden;		/*水平超出部分隐藏*/
+	white-space: nowrap;  /*禁止换行*/
+	display: inline-block;
+  }
+  
+#frameContent span{
+	float:left;
+	margin:7px 3px 0 0 ;
+	width:15px;
+	height:15px;
+	line-height:15px;
+	text-align: center;
+	font-size:12px;
+	background-color:#8eb9f5 ;
+	border:0px solid red;
+	color:white;
+}
+#frameContent span:nth-child(1){
+	background-color: red;
+}
+#frameContent span:nth-child(3){
+	background-color: #ff8547;
+}
+#frameContent span:nth-child(5){
+	background-color: #ffac38;
+}
+.frameContent a{color:#0000CC;text-decoration: none;}
+.frameContent a:hover{text-decoration: underline;}
+/*换一换按钮*/
+#pages a:active{color:red;}
+#pages a{color:#0000cc;text-decoration: none;}
+#pages{
+	height:20px;
+	border:0px solid red;
+	line-height: 20px;
+}
+#pages img{
+	border:0px solid red;
+	width:17px;
+	height:17px;
+	margin-top: 0px;
+	padding-left:1px;
+	position:relative; /*相对上边距移动*/
+	top:3px;			/*相对上边距3像素*/
+}
