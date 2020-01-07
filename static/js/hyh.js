@@ -4,6 +4,24 @@ var pgindex=1;                                      //当前页
 var allpage;
 window.onload = function()                             //重写窗体加载的事件
 {	
+	//更换新闻主题
+	$("#first-page").click(function(){//主页
+		$("#home-news").css("display","block");
+		$("#science-news").css("display","none");
+	});
+	$(".science").click(function(){//主页
+		$("#home-news").css("display","none");
+		$("#science-news").css("display","block");
+	});
+	
+	
+	$(".jq-dom-bkcolor").click(function(){
+		$(this).css("background-color","#e4e4e4").siblings().css("background-color","#f5f5f5"); 
+		$(".menu_page").find(".ssvg").css("fill","#707070");
+		$(this).find(".ssvg").css("fill","red");
+	})
+	
+	
 	
 	var allpages = Math.ceil(parseInt(obj.scrollHeight)/parseInt(obj. offsetHeight));//获取页面数量
 	//obj.scrollHeight网页内容的高度，最小值是clientHeight。offsetHeight显示高度

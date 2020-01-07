@@ -12,10 +12,11 @@ $(function(){
 				$(this).css("background-color","white");
 		}),
 		
-		//查询焦点search   
+		//查询焦点search
 		$(".search").focus();
 		
 		
+			
 });	
 
 	
