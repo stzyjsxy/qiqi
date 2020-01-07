@@ -12,11 +12,11 @@
 		background:url(../static/img/today-news-bg.png) repeat ;
 	}
 </style>
-<!--左侧图片放大样式-->							 
+						 
 
 <script>
 $(function(){
-	$(".news-box").mouseover(function(){
+	$(".news-box").mouseover(function(){//今日新闻底部线条颜色
 	    $(this).css("border-color","#159b46");
 		$(this).addClass("bg");
 	  });
@@ -24,13 +24,7 @@ $(function(){
 	    $(this).css("border-color","#dedee0");
 		$(this).removeClass("bg");
 	  });
-	
-	
-});
-</script>	
-<script>
-$(function(){
-
+<!--左侧图片放大样式-->	
 	$('.pic').hover(function(){
 		 $(this).animate({width:"210px",height:"140px",left:"-10px",top:"-10"},400);
 	},function(){
