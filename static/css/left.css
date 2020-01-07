@@ -1,10 +1,7 @@
-
-
 /*主页左侧导航栏菜单按钮*/
 #hide_show_bg:active{/*菜单栏点击显示按钮背景色*/
 	background-color: #cccccc;
 }
-
 /*菜单按钮页*/
 #menu_page{
 	width:242px;
@@ -20,20 +17,13 @@
 
 .menu_page-1::-webkit-scrollbar {/*滚动条*/
     width: 12px;     /*滚动条的宽，瘦胖设置*/
-    /*height: 1px;*/
 }
-.menu_page-1::-webkit-scrollbar-thumb {/*滚动条立体感*/
-    /*border-radius: 0px;*/
-     /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
+.menu_page-1::-webkit-scrollbar-thumb {
     background: #dcdcdc;
-
 }
 .menu_page-1::-webkit-scrollbar-track {/*滚动条里面轨道*/
-    /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
-    border-radius: 0px;
     background: #EDEDED;
 }
-
 #first-page {
 	justify-content: center;
 	padding:0 0 0 26px;
@@ -67,7 +57,6 @@
 	width:100%;
 	height:40px;
 }
-
 .next-page div:first-child{
 	margin:7px 16px 7px 0;
 	width:24px;
@@ -95,8 +84,10 @@
 .menu_page a{text-decoration:none;color:black;}  
 .menu_page a:hover {color:red;}  
 
-.jq-dom-bkcolor:hover{background-color:#cccccc;}
-.jq-dom-bkcolor:hover svg{fill:red;}
+.jq-dom-bkcolor:hover{background-color:#cccccc !important;}
+.jq-dom-bkcolor:hover svg{fill:red !important;}
+
+
 
 .next-page img {
 	height:24px;
