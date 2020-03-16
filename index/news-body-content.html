@@ -5,7 +5,7 @@
 		<title></title>
 		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 	</head>
-	<link rel="stylesheet" type="text/css" href="../static/css/content.css">
+	<link rel="stylesheet" type="text/css" href="./static/css/news-body-content.css">
 <script>
 	$(function(){
 		/*标题鼠标点击添加上边框样式*/
@@ -16,7 +16,7 @@
 		);
 		
 		
-		
+
 		//滑过其他标签，往上移动，显示第二屏
 		//科技--显示第二屏
 		$(".science_title1 ").click(function(){//财经
@@ -45,7 +45,7 @@
 		}
 		);
 		
-		//财经--显示第二屏
+		//财经--显示第二屏z
 		$(".business_title1 ").click(function(){//财经
 			setTimeout(function(){
 				$(".business_connect1").scrollTop(0);
@@ -63,7 +63,7 @@
 </script>
 <script>
 	//加载科技新闻列表
-	$.getJSON("../static/json/science.json",function(data){
+	$.getJSON("./static/json/science.json",function(data){
 		var $science = $(".science_connect1");
 		var sciencestrHtml = "";//存储新闻热点数据的变量
 		$science.empty();//清空内容
@@ -73,7 +73,7 @@
 		$science.html(sciencestrHtml);//显示处理后的数据	
 	});
 	//加载娱乐新闻列表
-	$.getJSON("../static/json/fun.json",function(data){
+	$.getJSON("./static/json/fun.json",function(data){
 		var $fun = $(".fun_connect1");
 		var funstrHtml = "";//存储新闻热点数据的变量
 		$fun.empty();//清空内容
@@ -83,7 +83,7 @@
 		$fun.html(funstrHtml);//显示处理后的数据	
 	});
  	//加载财经新闻列表
- 	$.getJSON("../static/json/business.json",function(data){
+ 	$.getJSON("./static/json/business.json",function(data){
 		var $business = $(".business_connect1");
 		var businessstrHtml = "";//存储新闻热点数据的变量
 		$business.empty();//清空内容
@@ -96,17 +96,18 @@
 	
  </script>
 	<body>
-		
+		<!--标题-->
+		<div style="font-size:24px;padding:20px;" onselectstart="return false">要闻</div>
 		<!--科技-->
 		<div class="first-news">
 			<!--标题栏-->
-			<div class="science_list">
+			<div class="list">
 				<ul	id="news-title-box-left" class="news-title-box-left">
 					<li id="science_title1" class="science_title1 bd">
 						<a  style="font-size: 24px;" >科技</a>
 					</li>
 		
-					<li id="science_title2" class="science_title2">
+					<li id="science_title2" class="science_title2" >
 						<a >手机</a>
 					</li>
 					
@@ -146,7 +147,7 @@
 		<!--娱乐-->
 		<div class="other-news">
 			<!--标题栏-->
-			<div class="fun_list">
+			<div class="list">
 				<ul	id="news-title-box-left" class="news-title-box-left">
 					<li id="fun_title1" class="fun_title1 bd">
 						<a style="font-size: 24px;" >娱乐</a>
@@ -192,7 +193,7 @@
 		<!--财经-->
 		<div class="other-news">
 			<!--标题栏-->
-			<div class="business_list">
+			<div class="list">
 				<ul	id="news-title-box-left" class="news-title-box-left">
 					<li id="business_title1" class="business_title1 bd">
 						<a style="font-size: 24px;" >财经</a>

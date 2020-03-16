@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>	
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	</head>
+	<link rel="stylesheet" type="text/css" href="./static/css/news-body-world.css">
+
+<style type="text/css">
+	.bg{
+		background:url(./static/img/today-news-bg.png) repeat ;
+	}
+</style>
+
+<script>
+$(function(){
+	$(".news-box").mouseover(function(){//今日新闻底部线条颜色
+	    $(this).css("border-color","#159b46");
+		$(this).addClass("bg");
+	  });
+	  $(".news-box").mouseout(function(){
+	    $(this).css("border-color","#dedee0");
+		$(this).removeClass("bg");
+	  });
+<!--左侧图片放大样式-->	
+	$('.pic').hover(function(){
+		 $(this).animate({width:"210px",height:"140px",left:"-10px",top:"-10"},400);
+	},function(){
+		 $(this).animate({width:"190px",height:"120px",left:"0px",top:"0"},400);
+	});
+	
+	$(".btn").mouseover(function(){//今日新闻底部线条颜色
+	    $(this).css("border-top","5px solid darkgreen");
+		$(".place-list").show();
+	});
+	$(document).click(function(event){
+			$(".place-list").hide();
+	});
+	//$(".place-list").mouseout(function(){//今日新闻底部线条颜色
+		//	$(this).hide();
+		//});
+	// 点击空白隐藏窗口
+
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+
+$(".place-title li").hover(function(){
+		$(this).css("border-bottom","1.5px solid green").siblings().css("border-bottom","0px solid green");
+		$(this).css("color","green").siblings().css("color","black");
+		if($(this).text().indexOf("热门")!=-1){
+				$(".condis").css("display","none");
+				$(".frameContent").css("display","block");
+		}
+		if($(this).text().indexOf("ABCD")!=-1){
+				$(".condis").css("display","none");
+				$(".ABCDContent").css("display","block");
+		}
+		if($(this).text().indexOf("EFGH")!=-1){
+				$(".condis").css("display","none");
+				$(".EFGHContent").css("display","block");
+		}
+		if($(this).text().indexOf("JKLM")!=-1){
+				$(".condis").css("display","none");
+				$(".JKLMContent").css("display","block");
+		}
+		if($(this).text().indexOf("NPQRS")!=-1){
+				$(".condis").css("display","none");
+				$(".NPQRSContent").css("display","block");
+		}
+		if($(this).text().indexOf("TWX")!=-1){
+				$(".condis").css("display","none");
+				$(".TWXContent").css("display","block");
+		}
+		if($(this).text().indexOf("YZ")!=-1){
+				$(".condis").css("display","none");
+				$(".YZContent").css("display","block");
+		}
+		if($(this).text().indexOf("海外")!=-1){
+				$(".condis").css("display","none");
+				$(".outContent").css("display","block");
+		}
+	})
+//---------------------------------------------------------------------------
+});
+
+</script>
+<script>
+ 	//加载地名列表
+ 	$.getJSON("./static/json/plance.json",function(data){
+		var $hots = $(".frameContent");//hots
+ 		var hotsstrHtml = "";//存储新闻热点数据的变量
+ 		$hots.empty();//清空内容
+ 		$.each(data,function(infoIndex,info){
+			for(infoindex=0;infoindex<info["name"].length;infoindex++)
+				hotsstrHtml += "<a href=''" + "class='padding'>" +info["name"][infoindex] + "</a>";
+ 		});
+ 		$hots.html(hotsstrHtml);//显示处理后的数据
+		
+		var A = "",B = "",C = "",D = "",E = "",F = "",G = "",H = "",J = "",K = "",L = "",M = "",
+			N = "",P = "",Q = "",R = "",S = "",T = "",W = "",X = "",Y = "",Z = "",out = "";
+		
+		$.each(data,function(infoIndex,info){
+			for(infoindex=0;infoindex<info["A"].length;infoindex++){
+				A += "<a href=''" + "class='padding'>" +info["A"][infoindex] + "</a>";
+			}
+			$(".demo-a").html(A);
+			for(infoindex=0;infoindex<info["B"].length;infoindex++){
+				B += "<a href=''" + "class='padding'>" +info["B"][infoindex] + "</a>";
+			}
+			$(".demo-b").html(B);
+			for(infoindex=0;infoindex<info["C"].length;infoindex++){
+				C += "<a href=''" + "class='padding'>" +info["C"][infoindex] + "</a>";
+			}
+			$(".demo-c").html(C);
+			for(infoindex=0;infoindex<info["D"].length;infoindex++){
+				D += "<a href=''" + "class='padding'>" +info["D"][infoindex] + "</a>";
+			}
+			$(".demo-d").html(D);
+			for(infoindex=0;infoindex<info["E"].length;infoindex++){
+				E += "<a href=''" + "class='padding'>" +info["E"][infoindex] + "</a>";
+			}
+			$(".demo-e").html(E);
+			for(infoindex=0;infoindex<info["F"].length;infoindex++){
+				F += "<a href=''" + "class='padding'>" +info["F"][infoindex] + "</a>";
+			}
+			$(".demo-f").html(F);
+			for(infoindex=0;infoindex<info["G"].length;infoindex++){
+				G += "<a href=''" + "class='padding'>" +info["G"][infoindex] + "</a>";
+			}
+			$(".demo-g").html(G);
+			for(infoindex=0;infoindex<info["H"].length;infoindex++){
+				H += "<a href=''" + "class='padding'>" +info["H"][infoindex] + "</a>";
+			}
+			$(".demo-h").html(H);
+			for(infoindex=0;infoindex<info["J"].length;infoindex++){
+				J += "<a href=''" + "class='padding'>" +info["J"][infoindex] + "</a>";
+			}
+			$(".demo-j").html(J);
+			for(infoindex=0;infoindex<info["K"].length;infoindex++){
+				K += "<a href=''" + "class='padding'>" +info["K"][infoindex] + "</a>";
+			}
+			$(".demo-k").html(K);
+			for(infoindex=0;infoindex<info["L"].length;infoindex++){
+				L += "<a href=''" + "class='padding'>" +info["L"][infoindex] + "</a>";
+			}
+			$(".demo-l").html(L);
+			for(infoindex=0;infoindex<info["M"].length;infoindex++){
+				M += "<a href=''" + "class='padding'>" +info["M"][infoindex] + "</a>";
+			}
+			$(".demo-m").html(M);
+			for(infoindex=0;infoindex<info["N"].length;infoindex++){
+				N += "<a href=''" + "class='padding'>" +info["N"][infoindex] + "</a>";
+			}
+			$(".demo-n").html(N);
+			for(infoindex=0;infoindex<info["P"].length;infoindex++){
+				P += "<a href=''" + "class='padding'>" +info["P"][infoindex] + "</a>";
+			}
+			$(".demo-p").html(P);
+			for(infoindex=0;infoindex<info["Q"].length;infoindex++){
+				Q += "<a href=''" + "class='padding'>" +info["Q"][infoindex] + "</a>";
+			}
+			$(".demo-q").html(Q);
+			for(infoindex=0;infoindex<info["R"].length;infoindex++){
+				R += "<a href=''" + "class='padding'>" +info["R"][infoindex] + "</a>";
+			}
+			$(".demo-r").html(R);
+			for(infoindex=0;infoindex<info["S"].length;infoindex++){
+				S += "<a href=''" + "class='padding'>" +info["S"][infoindex] + "</a>";
+			}
+			$(".demo-s").html(S);
+			for(infoindex=0;infoindex<info["T"].length;infoindex++){
+				T += "<a href=''" + "class='padding'>" +info["T"][infoindex] + "</a>";
+			}
+			$(".demo-t").html(T);
+			for(infoindex=0;infoindex<info["W"].length;infoindex++){
+				W += "<a href=''" + "class='padding'>" +info["W"][infoindex] + "</a>";
+			}
+			$(".demo-w").html(W);
+			for(infoindex=0;infoindex<info["X"].length;infoindex++){
+				X += "<a href=''" + "class='padding'>" +info["X"][infoindex] + "</a>";
+			}
+			$(".demo-x").html(X);
+			for(infoindex=0;infoindex<info["Y"].length;infoindex++){
+				Y += "<a href=''" + "class='padding'>" +info["Y"][infoindex] + "</a>";
+			}
+			$(".demo-y").html(Y);
+			for(infoindex=0;infoindex<info["Z"].length;infoindex++){
+				Z += "<a href=''" + "class='padding'>" +info["Z"][infoindex] + "</a>";
+			}
+			$(".demo-z").html(Z);
+			for(infoindex=0;infoindex<info["out"].length;infoindex++){
+				out += "<a href=''" + "class='padding'>" +info["out"][infoindex] + "</a>";
+			}
+			$(".demo-out").html(out);
+		});
+		//显示处理后的数据	
+		
+ 	});
+	
+ </script>
+<body>
+	
+	<div id="today_news">
+		<!--标题-->
+		<div class="title"onselectstart="return false">全球新闻</div>
+		<div class="yaowen" onselectstart="return false" >
+				要闻
+		</div>
+		<div class="place-screen" onselectstart="return false">
+				<a>汕头新闻</a>
+				<div>
+					<span class="btn"></span>
+				</div>
+		</div>
+		<div class="place-list"><!--弹出框-->
+			<div class="con-ret"></div><!--弹出向上箭头-->
+			<div class="con-ret2"></div><!--空心向上箭头-->
+			<div class="con">
+				<ul class="place-title">
+					<li>热门</li>
+					<li>ABCD</li>
+					<li>EFGH</li>
+					<li>JKLM</li>
+					<li>NPQRS</li>
+					<li>TWX</li>
+					<li>YZ</li>
+					<li>海外</li>
+				</ul><!--拼音过滤-->
+				
+				<!--地名选择-->
+				<!--热门-->
+				<div class="frameContent condis"></div>
+				<!--ABCD-->
+				<div class="ABCDContent condis">
+					<div class="title-a">
+						<p>A</p><div class="demo-a"></div>
+					</div>
+					<div class="title-b">
+						<p>B</p><div class="demo-b"></div>
+					</div>
+					<div class="title-c">
+						<p>C</p><div class="demo-c"></div>
+					</div>
+					<div class="title-d">
+						<p>D</p><div class="demo-d"></div>
+					</div>
+				</div>
+				<!--EFGH-->
+				<div class="EFGHContent condis">
+					<div class="title-e">
+						<p>E</p><div class="demo-e"></div>
+					</div>
+					<div class="title-f">
+						<p>F</p><div class="demo-f"></div>
+					</div>
+					<div class="title-g">
+						<p>G</p><div class="demo-g"></div>
+					</div>
+					<div class="title-h">
+						<p>H</p><div class="demo-h"></div>
+					</div>
+				</div>
+				<!--JKLM-->
+				<div class="JKLMContent condis">
+					<div class="title-j">
+						<p>J</p><div class="demo-j"></div>
+					</div>
+					<div class="title-k">
+						<p>K</p><div class="demo-k"></div>
+					</div>
+					<div class="title-l">
+						<p>L</p><div class="demo-l"></div>
+					</div>
+					<div class="title-m">
+						<p>M</p><div class="demo-m"></div>
+					</div>
+				</div>
+				<!--NPQRS-->
+				<div class="NPQRSContent condis">
+					<div class="title-n">
+						<p>N</p><div class="demo-n"></div>
+					</div>
+					<div class="title-p">
+						<p>P</p><div class="demo-p"></div>
+					</div>
+					<div class="title-q">
+						<p>Q</p><div class="demo-q"></div>
+					</div>
+					<div class="title-r">
+						<p>R</p><div class="demo-r"></div>
+					</div>
+					<div class="title-s">
+						<p>S</p><div class="demo-s"></div>
+					</div>
+				</div>
+				<!--TWX-->
+				<div class="TWXContent condis">
+					<div class="title-t">
+						<p>T</p><div class="demo-t"></div>
+					</div>
+					<div class="title-w">
+						<p>W</p><div class="demo-w"></div>
+					</div>
+					<div class="title-x">
+						<p>X</p><div class="demo-x"></div>
+					</div>
+				</div>
+				<!--YZ-->
+				<div class="YZContent condis">
+					<div class="title-y">
+						<p>Y</p><div class="demo-y"></div>
+					</div>
+					<div class="title-z">
+						<p>Z</p><div class="demo-z"></div>
+					</div>
+				</div>
+				<!--海外-->
+				<div class="outContent condis">
+					<div class="title-out">
+						<p></p><div class="demo-out"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="other-world" onselectstart="return false" onclick="window.open('other-world.html')">
+				海外城市展示
+		</div>
+		<!--热点列表-->
+		<div class="news-box">
+			<div class="news-img"><!--左图-->
+				<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">
+					<img class="pic" src="http://cms-bucket.ws.126.net/2020/0106/ef76f1b8p00q3nrya000qc0009c005uc.png?imageView&amp;thumbnail=190y120" alt="三星2月11日办发布会 Galaxy S20和新折叠机来了？">
+				</a>
+			</div>
+			<div class="news-demo"><!--右标题及内容-->
+				<div class="news_title"><!--标题-->
+					<h3>
+						<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">三星2月11日办发布会 Galaxy S20和新折叠机来了？</a>
+					</h3>
+				</div>
+				<div class="news_from"><!--来源-->
+					<strong class="barlink"><a href="">IT业界</a></strong>
+					<div class="keywords">
+						<a href="http://tech.163.com/keywords/4/0/4e09661f/1.html">三星</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">智能手机</a>
+					</div>
+					<span class="time">3小时前</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="news-box">
+			<div class="news-img"><!--左图-->
+				<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">
+					<img class="pic" src="http://cms-bucket.ws.126.net/2020/0106/7b0e4e58p00q3nqfp00mvc000s600e3c.png?imageView&thumbnail=190y120" alt="三星2月11日办发布会 Galaxy S20和新折叠机来了？">
+				</a>
+			</div>
+			<div class="news-demo"><!--右标题及内容-->
+				<div class="news_title"><!--标题-->
+					<h3>
+						<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">CES将开幕 华为等数百家中国企业将集体亮相</a>
+					</h3>
+				</div>
+				<div class="news_from"><!--来源-->
+					<strong class="barlink"><a href="">其他</a></strong>
+					<div class="keywords">
+						<a href="http://tech.163.com/keywords/4/0/4e09661f/1.html">雷军</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">卢伟冰</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">小米</a>
+					</div>
+					<span class="time">3小时前</span>
+				</div>
+			</div>
+		</div>
+	
+		<div class="news-box">
+			<div class="news-img"><!--左图-->
+				<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">
+					<img class="pic" src="http://cms-bucket.ws.126.net/2020/0106/ef76f1b8p00q3nrya000qc0009c005uc.png?imageView&amp;thumbnail=190y120" alt="三星2月11日办发布会 Galaxy S20和新折叠机来了？">
+				</a>
+			</div>
+			<div class="news-demo"><!--右标题及内容-->
+				<div class="news_title"><!--标题-->
+					<h3>
+						<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">三星2月11日办发布会 Galaxy S20和新折叠机来了？</a>
+					</h3>
+				</div>
+				<div class="news_from"><!--来源-->
+					<strong class="barlink"><a href="">IT业界</a></strong>
+					<div class="keywords">
+						<a href="http://tech.163.com/keywords/4/0/4e09661f/1.html">三星</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">智能手机</a>
+					</div>
+					<span class="time">3小时前</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="news-box">
+			<div class="news-img"><!--左图-->
+				<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">
+					<img class="pic" src="http://cms-bucket.ws.126.net/2020/0106/ef76f1b8p00q3nrya000qc0009c005uc.png?imageView&amp;thumbnail=190y120" alt="三星2月11日办发布会 Galaxy S20和新折叠机来了？">
+				</a>
+			</div>
+			<div class="news-demo"><!--右标题及内容-->
+				<div class="news_title"><!--标题-->
+					<h3>
+						<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">三星2月11日办发布会 Galaxy S20和新折叠机来了？</a>
+					</h3>
+				</div>
+				<div class="news_from"><!--来源-->
+					<strong class="barlink"><a href="">IT业界</a></strong>
+					<div class="keywords">
+						<a href="http://tech.163.com/keywords/4/0/4e09661f/1.html">三星</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">智能手机</a>
+					</div>
+					<span class="time">3小时前</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="news-box">
+			<div class="news-img"><!--左图-->
+				<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">
+					<img class="pic" src="http://cms-bucket.ws.126.net/2020/0106/ef76f1b8p00q3nrya000qc0009c005uc.png?imageView&amp;thumbnail=190y120" alt="三星2月11日办发布会 Galaxy S20和新折叠机来了？">
+				</a>
+			</div>
+			<div class="news-demo"><!--右标题及内容-->
+				<div class="news_title"><!--标题-->
+					<h3>
+						<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">三星2月11日办发布会 Galaxy S20和新折叠机来了？</a>
+					</h3>
+				</div>
+				<div class="news_from"><!--来源-->
+					<strong class="barlink"><a href="">IT业界</a></strong>
+					<div class="keywords">
+						<a href="http://tech.163.com/keywords/4/0/4e09661f/1.html">三星</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">智能手机</a>
+					</div>
+					<span class="time">3小时前</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="news-box">
+			<div class="news-img"><!--左图-->
+				<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">
+					<img class="pic" src="http://cms-bucket.ws.126.net/2020/0106/ef76f1b8p00q3nrya000qc0009c005uc.png?imageView&amp;thumbnail=190y120" alt="三星2月11日办发布会 Galaxy S20和新折叠机来了？">
+				</a>
+			</div>
+			<div class="news-demo"><!--右标题及内容-->
+				<div class="news_title"><!--标题-->
+					<h3>
+						<a href="https://tech.163.com/20/0106/07/F26MO2S000097U7T.html">三星2月11日办发布会 Galaxy S20和新折叠机来了？</a>
+					</h3>
+				</div>
+				<div class="news_from"><!--来源-->
+					<strong class="barlink"><a href="">IT业界</a></strong>
+					<div class="keywords">
+						<a href="http://tech.163.com/keywords/4/0/4e09661f/1.html">三星</a>
+						<a href="http://tech.163.com/keywords/6/7/667a80fd624b673a/1.html">智能手机</a>
+					</div>
+					<span class="time">3小时前</span>
+				</div>
+			</div>
+		</div>
+		
+	</div> 
+	
+															
+		
+
+
+
+	</body>
+</html>

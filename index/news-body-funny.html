@@ -30,116 +30,14 @@ $(function(){
 	},function(){
 		 $(this).animate({width:"190px",height:"120px",left:"0px",top:"0"},400);
 	});
-	
-	<!--图片轮播-->
-		var pnum=1;
-		var timer;
-		var hasStarted = false;
-		var windowWidth=658;//获取轮播宽度
-		$(".banner .left").click(function(){
-		    stop();
-		    --pnum;
-		    pnum = pnum%$(".pt li").size();
-		    showpt(pnum);
-		});
-		$(".banner .right").click(function(){
-		    stop();
-		    ++pnum;
-		    pnum = pnum%$(".pt li").size();
-		    showpt(pnum);
-		});
-		function showpt(index){
-		    $(".pt li").eq(index).show().siblings().hide();
-		    $(".dot li").eq(index).css("background","red").siblings().css("background","#fff");
-		}
-		$(".dot li").hover(function () {
-		    stop();
-		    pnum = $(this).index();
-		    $(".pt li").eq(pnum).show().siblings().hide();
-		    $(this).css("background","red").siblings().css("background","#fff");
-		},start);
-		$(".pt li").each(function(){
-		    $(this).hover(function(){
-		        stop();
-				showbutton();
-		        show(index);
-		        pnum = index+1;
-		    },start)
-			
-		});
-		function start() {
-		    if(!hasStarted) {
-		        hasStarted = true;
-		        timer = setInterval(function(){
-		            showpt(pnum);
-		            pnum++;
-		            if(pnum== $(".pt li").size()){
-		                pnum =0;
-		            }
-		        },4000);
-		    }
-		}
-		function stop() {
-		    clearInterval(timer);
-		    hasStarted = false;
-		}
-		function showbutton() {
-			$(".left").show();
-			$(".right").show();
-		}
-		$(".dot").mouseover(function(){
-		    $(".left").show();
-		    $(".right").show();
-			//alert(123);
-		})
-		$(".pt").mouseover(function(){
-		    $(".left").show();
-		    $(".right").show();
-			//alert(123);
-		})
-		$(".banner").mouseout(function(){
-		    $(".left").hide();
-		    $(".right").hide();
-			//alert(123);
-		})
-		start();
-	
 
 });
 </script>
 
 <body>
-	<div class="banner" onselectstart="return false">
-		<div class="pt">
-			<div class="left" >《</div>
-			<ul>
-				<li>
-					<a><img class="img-slide" src="./static/img/dp1.jpg" ></a>
-				</li>
-				<li>
-					<a><img class="img-slide" src="./static/img/dp2.jpg" ></a>
-				</li>
-				<li>
-					<a><img class="img-slide" src="./static/img/dp3.jpg" ></a>
-				</li>
-				<li>
-					<a><img class="img-slide" src="./static/img/dp4.jpg" ></a>
-				</li>
-			</ul>
-			<div class="right">》</div>
-		</div>
-		<div class="dot">
-			<ul>
-				<li class="fi"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
-	</div>
 	<div id="today_news">
 		<!--标题-->
-		<div style="font-size:24px;padding:20px;" onselectstart="return false">科技热点</div>
+		<div style="font-size:24px;padding:20px;" onselectstart="return false">娱乐头条</div>
 		<!--热点列表-->
 		<div class="news-box">
 			<div class="news-img"><!--左图-->
