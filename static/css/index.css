@@ -1,44 +1,542 @@
-html,body{
+*{
+	margin:0;
+	cursor:pointer; /*页面全局加鼠标悬停小手样式*/
+	
+}
+
+/*以下是顶部样式*/
+.top {
+	z-index:999;
+	margin:-2px 0 0 0;
+	padding:0 16px 0 16px;
+	position:fixed;
+	width: 100%;
+	height:56px;
+	border: 1px solid #ccc;
+	background-color:#ffffff;
+	box-shadow:0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
+}
+
+.top>div:nth-child(1) {
+	height:56px;width:20%;
+	display:flex;
+	float:left;
+	border: 0px solid yellow;
+}
+.hide_show {
+	padding:8px 8px 8px 0px;
+	margin-right:8px;
+	width:40px;
+	height:40px;
+	border: 0px solid green;
+	float: left;
+}
+.hide_show div {
+	width: 38px;
+	height:38px;
+	border: 0px solid blue;
+	border-radius:50%;
+	margin-left:5px;
+}
+.logo {
+	margin:16px 0px 0 0;
+	width:129px;
+	height:24px;
+	border:0px solid red;
+	float:left
+}
+.logo img {
+	width:80px;
+	height: 24px;
+	border: 0px solid green;
+	float: left;
+}
+
+/*搜索栏*/
+.top>div:nth-child(2) {
+	height:100%;
+	width:58%;
+	display:flex;
+	float:left;
+	border:0px solid black;
+}
+.top>div:nth-child(2) >div{
+	margin:12px 40px 0 40px;
+	display:flex;
+	width:92%;
+	height:32px;
+	border:0px solid blue;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top>div:nth-child(2) form{
 	width:100%;
- 	height:100%;
- 	margin:0;
- 	padding:0;
+	height:32px;
+	display:flex;
+	border: 1px solid #cccccc;
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+.top>div:nth-child(2) form >div {
+	width:100%;
+	height:28px;
+	padding:2px 6px 2px 6px;
+	border-right:1px solid #cccccc;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*搜索按钮--放大镜*/
+.search {
+	width:100%;
+	height:24px;
+	font-size:16px;
+	outline: none;
+	border:none;
+	border:0px solid green;
+}
+.search-buttom {
+	padding:1px 6px 1px 6px;
+	border:0px solid red;
+	width:7%;
+	height: 32px;
+	float: right;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color:#f8f8f8;
+	border-top-right-radius:2px;
+	border-bottom-right-radius:2px;
+	outline:none;
+}
+.search-buttom div {
+	width: 100%;
+	height: 28px;
+	border:0px solid red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search-buttom div div{
+	width: 100%;
+	height: 20px;
+	border:0px solid red;
+	display: flex;
 }
 
 
+.top>div:nth-child(3) {
+	height:56px;
+	width:20%;
+	border:0px solid black;
+	display:flex;
+	float:right;
+}
 
-#hide_show_bg:active{
+.top--right {
+	margin:6px 0px 0 0px;
+	width:98%;
+	height:40px;
+	display:flex;
+	border:0px solid red;
+
+}
+.top--right-1-4 {
+	margin:0px 3% 0 0px;
+	width:15%;
+	height:40px;
+	border:0px solid red;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top--right svg {
+	 pointer-events: none;
+	 display: block;
+	 width: 100%;
+	 height: 100%;
+}
+/*登录*/
+.top--right div:last-child {
+	margin:0px 0px 0 0px;
+	width:20%;
+	height:40px;
+	border:0px solid red;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top--right div:last-child div {
+	font-size:70%;
+	width:50%;
+	height: 19px;
+	border: 0px solid red;
+}
+
+/*mini登录窗口*/
+.mini-login {
+    display: none;
+	margin-top:15px;
+	margin-right:2%;
+	/*display:flex;*/
+	width:262px;
+	height:210px;
+	border:1px solid #ddd;
+	float:right;
+	background-color: white;
+}
+.mini-login a {
+	/*color: white;*/
+	text-decoration:none;
+}
+.mini-login a:hover {
+    display: block;
+}
+.mini-login> form {
+	margin-top:10px;
+	width:260px;
+	height:192px;
+	border:0px solid black;
+}
+.mini-login-ad{
+	margin-left:36px;
+	margin-top:16px;
+	width:190px;
+	height:30px;
+	justify-content: center;
+	align-items: center;
+	border:0px solid black;
+}
+.mini-login-pwd{
+	margin-left:36px;
+	margin-top:14px;
+	width:190px;
+	height:30px;
+	justify-content: center;
+	align-items: center;
+	border:0px solid black;
+}
+.mini-login-login{
+	border-radius:3px;
+	float:left;
+	margin-left:36px;
+	text-align:center;
+	color:white;
+	margin-top:14px;
+	width:88px;
+	height:30px;
+	background-color: rgb(94, 186, 109);
+	background-image: -webkit-linear-gradient(top, rgb(94, 186, 109), rgb(60, 160, 81));
+	border:1px solid #239438;
+	color: #fff;
+	line-height: 30px;
+	font-size:15px;
+}
+/*.mini-login> form >div:nth-child(3) a {*/
+	/*color: white;*/
+/*}*/
+.mini-login-register{
+	border-radius:3px;
+	float:left;
+	margin-left:10px;
+	text-align:center;
+	color:white;
+	margin-top:14px;
+	width:88px;
+	height:30px;
+	background-color: rgb(94, 186, 109);
+	background-image: -webkit-linear-gradient(top, rgb(94, 186, 109), rgb(60, 160, 81));
+	border: 1px solid #239438;
+	color: #fff;
+	line-height: 30px;
+	font-size:15px;
+}
+.mini-login-register a {
+	color: white;
+}
+.mini-login-forget{
+	font-size:12px;
+	margin-left:36px;
+	float:left;
+	margin-top:16px;
+	width:190px;
+	height:30px;
+	justify-content: center;
+	align-items: center;
+	border:0px solid black;
+}
+
+.tip {
+	font-size:18px;
+	color:red;
+	float:left;
+	width:190px;
+	height:30px;
+	margin-bottom:54px;
+	border:0px solid black;
+	margin-left:30px;
+	justify-content: center;
+	align-items: center;
+}
+/*以上是顶部样式*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*以下是左侧样式*/
+/*主页左侧导航栏菜单按钮*/
+#hide_show_bg:active{/*菜单栏点击显示按钮背景色*/
 	background-color: #cccccc;
 }
-
-
-#home_page{
-	overflow: hidden;
-	height: 100%;
-	margin:0; padding:0;
-	width:18%;height:100%;
+#menu_page:hover{/*显示隐藏滚动条*/
+	overflow-y: scroll;
+	/*overflow-y: none;*/
+}
+.menu_page-1::-webkit-scrollbar {/*滚动条*/
+    width: 12px;     /*滚动条的宽，瘦胖设置*/
+}
+.menu_page-1::-webkit-scrollbar-thumb {
+    background: #dcdcdc;
+}
+.menu_page-1::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    background: #EDEDED;
+}
+/*菜单按钮页*/
+#menu_page{
+	width:244px;
+	height:100%;
 	border: 0px solid red;
 	background-color:#f5f5f5;
 	position:fixed;
+	overflow: hidden;
+}
+#first-page {
+	justify-content: center;
+	padding:0 0 0 26px;
+	margin-top:68px;
+	width:216px;
+	height:40px;
+	color:red;
+	border-right: 3px solid red;
+    background-color:#e4e4e4; 
+}
+#first-page div:first-child{
+	margin:7px 16px 7px 0;
+	width:24px;
+	height: 24px;
+	
+	float: left;
+}
+#first-page div:last-child{
+	display:flex;
+	height:24px;
+	margin:7px 0px 7px 0;
+	border: 0px solid black;
+	float:left;
 	font-size: 15px;
-	/*overflow-y: scroll;*/
+	line-height: 24px;
 }
-#home_page:hover{
-	overflow-y: scroll;
+#first-page div a{color:red;}/*首页导航默认文字颜色*/
+/*为您推荐;收藏夹*/
+.next-page{
+	justify-content: center;
+	padding:0 0 0 26px;
+	width:216px;
+	height:40px;
+	border:0px solid blue;
+}
+.next-page div:first-child{
+	margin:7px 16px 7px 0;
+	width:24px;
+	height:24px;
+	float: left;
+	border:0px solid red;
+}
+.next-page div:last-child{
+	border:0px solid red;
+	display:flex;
+	height:24px;
+	margin:7px 0px 7px 0;
+	float:left;
+	font-size: 15px;
+	line-height: 24px;
+}
+.choice {
+	width:100%;
+	height:35px;
+	border:0px solid red;
+	font-size:16px;
+	font-weight:800;
+	padding:16px 24px 0px 14px;	
+}
+.menu_page a{text-decoration:none;color:black;}  
+.menu_page a:hover {color:red;}
+
+/*鼠标滑过,添加新的背景色和图标颜色 !important，作用是提高指定样式规则的应用优先权（优先级）*/
+.jq-dom-bkcolor:hover,
+.jq-dom:hover{background-color:#cccccc !important;color:red !important;}
+.jq-dom-bkcolor:hover svg{fill:red !important;}
+.jq-dom-bkcolor-right-border{
+	border-right:2px solid red;
+}
+/*svg图标样式*/
+.next-page img {
+	height:24px;
+	width:24px;
+	border-radius:50%;
 }
 
-.home_page-1::-webkit-scrollbar {/*滚动条*/
-    width: 12px;     /*滚动条的宽，瘦胖设置这里*/
-    /*height: 1px;*/
+/*版权*/
+.copyright {
+	border:0px solid black;
+	width:100%;
+	margin:390px 0 20px 0;
+	
+	font-size:12px;
+	
 }
-.home_page-1::-webkit-scrollbar-thumb {/*滚动条立体感*/
-    /*border-radius: 0px;*/
-     /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
-    background: #dcdcdc;
 
+/*菜单栏图标css3动画效果*/
+.noDataImg{
+    -webkit-transform: rotate(360deg);
+    animation: rotation 2s linear infinite;
+    -moz-animation: rotation 2s linear infinite;
+    -webkit-animation: rotation 2s linear infinite;
+    -o-animation: rotation 2s linear infinite;
+  }
+  @-webkit-keyframes rotation{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+  }
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+/*以下是新闻主体样式*/
+/*要闻*/
+.content {
+	margin:0px 0 0 272px;
+	padding:16px 32px 32px 32px;
+	display:flex;
+	width:75%;
+	height:1600px;
+	border:0px solid red;
+	background-color: #fafafa;
+	float:left;
 }
-.home_page-1::-webkit-scrollbar-track {/*滚动条里面轨道*/
-    /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
-    border-radius: 0px;
-    background: #EDEDED;
-}    
+iframe{
+	width:658px; 
+	height:1600px;
+	margin-top:50px;
+	border:0px solid red;
+}
+
+
+/*新闻热点*/
+.content-right {
+	background-color:#f3f3f3;
+	float:right;
+	margin:74px 0 0 60px;
+	border:0px solid black;
+	border-radius:8px;
+	width:292px;
+	height:314px;
+	
+}
+.content-right-title {
+	float:left;
+	border-bottom:1px solid #dcdcdc;
+	width:260px;
+	height:48px;
+	margin:0 16px 0 16px;
+	padding-top:2.8px;
+}
+.content-right-title >div{
+	float:left;
+	margin-top:13px;
+	border:0px solid black;
+	width:260px;
+	height:22px
+}
+
+.content-right-title >div >div{
+	float:left;
+	font-size:18px;
+	border:0px solid blue;
+	
+}
+.content-right-title >div >div:last-child {
+	float:right;
+	font-size:14px;
+}
+
+
+#frameContent{
+	float:left;
+	margin:10px 0 0 16px;
+	width:272px;/*调整显示区的宽*/
+	height:240px;/*调整显示区的高,显示6条记录*/
+	border:0px solid BLACK;
+	overflow-y: hidden;		/*超出部分垂直方向都隐藏*/
+	
+ }
+#frameContent>a{
+	float:left;
+	font-size:14px;
+	line-height:30px;
+	width:252px;/*调整显示区的宽*/
+	height:30px;/*调整显示区的高*/
+	border-top:0px solid blue;
+	text-overflow: ellipsis; /*省略号*/
+	overflow-x: hidden;		/*水平超出部分隐藏*/
+	white-space: nowrap;  /*禁止换行*/
+	display: inline-block;
+  }
+  
+#frameContent span{
+	float:left;
+	margin:7px 3px 0 0 ;
+	width:15px;
+	height:15px;
+	line-height:15px;
+	text-align: center;
+	font-size:12px;
+	background-color:#8eb9f5 ;
+	border:0px solid red;
+	color:white;
+}
+#frameContent span:nth-child(1){
+	background-color: red;
+}
+#frameContent span:nth-child(3){
+	background-color: #ff8547;
+}
+#frameContent span:nth-child(5){
+	background-color: #ffac38;
+}
+.frameContent a{color:#0000CC;text-decoration: none;}
+.frameContent a:hover{text-decoration: underline;}
+/*换一换按钮*/
+#pages a:active{color:red;}
+#pages a{color:#0000cc;text-decoration: none;}
+#pages{
+	height:20px;
+	border:0px solid red;
+	line-height: 20px;
+}
+#pages img{
+	border:0px solid red;
+	width:17px;
+	height:17px;
+	margin-top: 0px;
+	padding-left:1px;
+	position:relative; /*相对上边距移动*/
+	top:3px;			/*相对上边距3像素*/
+}
